@@ -67,7 +67,7 @@ function displayNES(width, height) {
     for (let rowIndex = 0; rowIndex < height; rowIndex++) {
         for (let colIndex = 0; colIndex < width; colIndex++) {
             if (document.getElementById("zerosum").checked) {
-                document.getElementById("results").innerHTML += '<span id="' + bool_to_idattr(nes[rowIndex][colIndex]) + '">' + payoutMatrix[rowIndex][colIndex][0] + ')</span>' + (colIndex < width - 1 ? ", " : "");
+                document.getElementById("results").innerHTML += '<span id="' + bool_to_idattr(nes[rowIndex][colIndex]) + '">' + payoutMatrix[rowIndex][colIndex][0] + '</span>' + (colIndex < width - 1 ? ", " : "");
             } else {
                 document.getElementById("results").innerHTML += '<span id="' + bool_to_idattr(nes[rowIndex][colIndex]) + '">(' + payoutMatrix[rowIndex][colIndex][0] + ', ' + payoutMatrix[rowIndex][colIndex][1] + ')</span>' + (colIndex < width - 1 ? ", " : "");
             }
