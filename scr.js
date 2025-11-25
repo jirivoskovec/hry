@@ -41,12 +41,12 @@ function loadMatrix() {
 
 function isNE(rowIndex, colIndex, width, height) {
     var isAlright = true;
-    for (let i = 0; i < width; i++) {
+    for (let i = 0; i < height; i++) {
         if (payoutMatrix[rowIndex][colIndex][0] < payoutMatrix[i][colIndex][0]) {
             isAlright = false;
         }
     }
-    for (let i = 0; i < height; i++) {
+    for (let i = 0; i < width; i++) {
         if (payoutMatrix[rowIndex][colIndex][1] < payoutMatrix[rowIndex][i][1]) {
             isAlright = false;
         }
@@ -80,6 +80,7 @@ function findNES() {
     const width = document.getElementById("width").value;
     const height = document.getElementById("height").value;
     loadMatrix();
+    console.log(payoutMatrix);
     nes = [];
     for (let rowIndex = 0; rowIndex < height; rowIndex++) {
         nes.push([]);
